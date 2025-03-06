@@ -11,8 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trabajadors', function (Blueprint $table) {
+        Schema::create('trabajadores', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('telefono');
+            $table->string('email')->unique();
+            $table->string('foto')->nullable();
+            $table->string('departamento');
+            $table->json('cargos');
+            $table->date('fecha_nacimiento');
+            $table->boolean('sustituto')->default(false);
+            $table->boolean('mayor55')->default(false);
             $table->timestamps();
         });
     }
@@ -22,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trabajadors');
+        Schema::dropIfExists('trabajadores');
     }
 };

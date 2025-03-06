@@ -45,6 +45,8 @@ class TrabajadorController extends Controller
     {
         $trabajadores = Trabajador::orderBy('fecha_nacimiento', 'desc')->get();
         $colors = $this->colors;
+
+        // print_r($trabajadores);
         
         return view('trabajadores.index', compact('trabajadores', 'colors'));
     }

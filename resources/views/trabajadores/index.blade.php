@@ -34,7 +34,7 @@
         </div>
     </div>
 
-
+    
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         @foreach ($trabajadores as $trabajador)
