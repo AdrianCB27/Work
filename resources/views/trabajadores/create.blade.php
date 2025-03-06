@@ -33,7 +33,7 @@
         <label class="block mt-4 mb-2 font-semibold">Departamento</label>
         <select name="departamento" class="w-full border p-2 rounded">
             @foreach($deps as $key => $departamento)
-                <option value="{{ $key }}">
+                <option class="black" value="{{ $key }}">
                     {{ $departamento }}
                 </option>
             @endforeach

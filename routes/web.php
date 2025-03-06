@@ -7,9 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index', function () {
-    return view('trabajadores.index');
-});
+// Route::get('index', function () {
+//     return view('trabajadores.index');
+// });
 
 Route::get('trabajadores', [TrabajadorController::class, 'index'])->name('trabajadores.index');
 Route::post('trabajadores', [TrabajadorController::class, 'filter'])->name('trabajadores.filter');
